@@ -1,0 +1,12 @@
+<html>
+<head>
+  <title>New User</title>
+</head>
+
+<body>
+  <form action='/users/create' method='post'>
+    <input type='text' name='user[name]' value='<%= @user.name %>' />
+    <input type='submit' value='Create User' />
+  </form>
+</body>
+</html>
