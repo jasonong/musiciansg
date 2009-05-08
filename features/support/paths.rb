@@ -10,6 +10,9 @@ module NavigationHelpers
     
     when /the homepage/
       '/'
+    when /the new frooble page/
+      new_frooble_path
+
     
     # Add more mappings here.
     # Here is a more fancy example:
