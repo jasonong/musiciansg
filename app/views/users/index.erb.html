@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+  </tr>
+  <% for user in @users %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= link_to 'Destroy', user, :method => :delete %></td>
+  </tr>
+  <% end %>
+</table>

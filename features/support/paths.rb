@@ -10,8 +10,8 @@ module NavigationHelpers
     
     when /the homepage/
       '/'
-    when /the new frooble page/
-      new_frooble_path
+    when /the new user page/
+      new_user_path
 
     
     # Add more mappings here.

@@ -23,6 +23,8 @@ ActionController::Routing::Routes.draw do |map|
   #     products.resources :comments
   #     products.resources :sales, :collection => { :recent => :get }
   #   end
+  
+  map.resources :users
 
   # Sample resource route within a namespace:
   #   map.namespace :admin do |admin|

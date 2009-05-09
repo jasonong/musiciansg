@@ -1,16 +1,16 @@
-Given /^the following froobles:$/ do |froobles|
-  Frooble.create!(froobles.hashes)
+Given /^the following users:$/ do |users|
+  User.create!(users.hashes)
 end
 
-When /^I delete the (\d+)(?:st|nd|rd|th) frooble$/ do |pos|
-  visit froobles_url
+When /^I delete the (\d+)(?:st|nd|rd|th) user$/ do |pos|
+  visit users_url
   within("table > tr:nth-child(#{pos.to_i+1})") do
     click_link "Destroy"
   end
 end
 
-Then /^I should see the following froobles:$/ do |froobles|
-  froobles.rows.each_with_index do |row, i|
+Then /^I should see the following users:$/ do |users|
+  users.rows.each_with_index do |row, i|
     row.each_with_index do |cell, j|
       response.should have_selector("table > tr:nth-child(#{i+2}) > td:nth-child(#{j+1})") { |td|
         td.inner_text.should == cell
